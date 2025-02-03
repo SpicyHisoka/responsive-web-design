@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    margin: 5px;
+    padding: 0;
+    font-family: 'Doto', sans-serif;
+    background-color: #2a0000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Main Styling */
+main {
+    width: 90%;
+    margin: 15px auto;
+    background: #2F1D1D;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Section */
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#title {
+    font-family: 'Eater', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 5px;
+    color: #FF6666;
+}
+
+.title p {
+    font-size: 1.2rem;
+    color: #B8B8B8;
+}
+
+img {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#img-div {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+#image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#img-caption {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #ff8c00;
+}
+
+/* Timeline Section */
+.timeline h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #FF6666;
+    margin-bottom: 20px;
+}
+
+.timeline-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-container li {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #333333;
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Trio Section */
+.trio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.trio div {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.trio img {
+    width: 100%;
+    height: 200px; /* Imposta un'altezza fissa */
+    object-fit: cover; /* Assicura che l'immagine mantenga il suo rapporto di aspetto senza distorsioni */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#img-div img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#img-div img:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .trio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-container li {
+        font-size: 0.9rem;
+    }
+
+    #title {
+        font-size: 2.5rem;
+    }
+}
+
+#tribute-link {
+    color: #007bff; /* Colore del link (blu) */
+    text-decoration: none; /* Rimuove la sottolineatura predefinita */
+    font-weight: bold;
+}

@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex; /* Layout flex per affiancare navbar e contenuto */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    width: 210px; /* Larghezza automatica della navbar */
+    background-color: rgb(62, 62, 62);
+    color: white;
+    position: fixed; /* Fissa la navbar a sinistra */
+    height: 100vh; /* Altezza totale della finestra */
+    padding: 20px;
+    overflow-y: auto; /* Abilita lo scroll per contenuti lunghi */
+    z-index: 999; /* Assicura che la navbar sia sempre sopra */
+}
+
+#navbar header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#navbar ul {
+    list-style: none; /* Rimuove i puntini della lista */
+    padding: 0;
+    margin: 0;
+}
+
+#navbar ul li {
+    margin: 20px 0;
+}
+
+#navbar .nav-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.35s; /* Tempo sull'effetto del background */
+}
+
+#navbar .nav-link:hover {
+    background-color: rgb(83, 83, 83); /* Cambia colore l'elemento quando ho il cursore sopra */
+}
+
+/* Contenuto principale */
+#main-doc {
+    margin-left: 250px; /* Sposta il contenuto a destra della navbar */
+    padding: 20px;
+    width: calc(100% - 250px); /* Occupa lo spazio rimanente */
+    box-sizing: border-box; /* Considera il padding nel calcolo della larghezza */
+}
+
+.main-section {
+    margin-bottom: 40px;
+}
+
+.main-section header {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:  rgb(62, 62, 62);
+    margin-bottom: 20px;
+}
+
+.main-section p {
+    font-size: 1rem;
+    color: rgb(83, 83, 83);
+}
+
+
+/* Style per i p dentro agli esempi */
+.examples p {
+    color: rgb(110, 110, 110);
+}
+
+pre {
+    padding: 20px auto;
+    color: rgb(110, 110, 110);
+
+}
+/* Box per codice */
+.syntax, .examples {
+    background-color: rgb(244, 244, 244);
+    border: 1px solid rgb(221, 221, 221);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; /* Gestisce il testo lungo */
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar {
+        width: 200px;
+    }
+
+    #main-doc {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        flex-direction: column;
+    }
+
+    #navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #main-doc {
+        margin-left: 0;
+        width: 100%;
+    }
+}

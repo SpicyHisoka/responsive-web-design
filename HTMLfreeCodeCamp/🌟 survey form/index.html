@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 id="title">Mandark Astronomanov Survey Form</h1>
+        <p id="description">This survey was created by Mandark Astronomanov for educational purposes. Thank you for your
+            participation.</p>
+    </header>
+
+    <form id="survey-form">
+
+        <fieldset class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your name" required />
+
+            <label id="email-label" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email" required />
+
+            <label id="number-label" for="number">Age (optional)</label>
+            <input id="number" name="number" type="number" min="10" max="120" placeholder="Enter your age" />
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label for="dropdown">Which option best describes your current role?</label>
+            <select id="dropdown" name="dropdown">
+                <option value="1">Lead Researcher</option>
+                <option value="2">Lab Technician</option>
+                <option value="3">Robotics Specialist</option>
+                <option value="4">Expert Chemist</option>
+                <option value="5">Data Analyst</option>
+            </select>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend>How willing are you to commit evil actions?</legend>
+            <label for="never">
+                <input type="radio" id="never" name="choice" value="never" class="input-radio" /> Never willing to commit evil actions
+            </label>
+            <label for="rarely">
+                <input type="radio" id="rarely" name="choice" value="rarely" class="input-radio" /> Rarely willing to commit evil actions
+            </label>
+            <label for="occasionally">
+                <input type="radio" id="occasionally" name="choice" value="occasionally" class="input-radio" /> Occasionally willing to
+                commit evil actions
+            </label>
+            <label for="often">
+                <input type="radio" id="often" name="choice" value="often" class="input-radio" /> Often willing to commit evil actions
+            </label>
+            <label for="always">
+                <input type="radio" id="always" name="choice" value="always" class="input-radio" /> Always willing to commit evil actions
+            </label>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend>What is the most evil invention you’ve created?</legend>
+            <select id="invention" name="invention">
+                <option value="1">The Universal Contradiction Ray</option>
+                <option value="2">The Reverse Gravity Beam</option>
+                <option value="3">The Intelligence Sucker</option>
+                <option value="4">The Time Freeze Clock</option>
+                <option value="5">The Chaotic Cloner</option>
+            </select>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend>What terrible inventions would you like to create with me?</legend>
+            <label for="robot">
+                <input type="checkbox" id="robot" name="robot" value="1" /> An ultra-sarcastic robot
+            </label>
+            <label for="machine">
+                <input type="checkbox" id="machine" name="machine" value="2" /> A single-use time machine
+            </label>
+            <label for="generator">
+                <input type="checkbox" id="generator" name="generator" value="3" /> The targeted blackout generator
+            </label>
+            <label for="gun">
+                <input type="checkbox" id="gun" name="gun" value="4" /> The slow-motion gun
+            </label>
+            <label for="duplicator">
+                <input type="checkbox" id="duplicator" name="duplicator" value="5" /> The inedible food duplicator
+            </label>
+            <label for="manipulator">
+                <input type="checkbox" id="manipulator" name="manipulator" value="6" /> The dream manipulator
+            </label>
+            <label for="hat">
+                <input type="checkbox" id="hat" name="hat" value="7" /> The hat of lies
+            </label>
+            <label for="magnet">
+                <input type="checkbox" id="magnet" name="magnet" value="8" /> The negative emotion magnet
+            </label>
+            <label for="asteroid">
+                <input type="checkbox" id="asteroid" name="asteroid" value="9" /> The asteroid deflection machine
+            </label>
+            <label for="idea">
+                <input type="checkbox" id="idea" name="idea" value="10" /> The idea-transforming ray
+            </label>
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label for="bio">Provide a bio:</label>
+            <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like being evil..."></textarea>
+        </fieldset>
+
+        <input id="submit" type="submit" value="Submit" />
+
+    </form>
+
+</body>
+
+</html>

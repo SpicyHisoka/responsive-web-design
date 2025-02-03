@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+/* Variabili di colore */
+:root {
+  --color-primary: #00b4d8; /* Blu elettrico */
+  --color-secondary: #1e1e1e; /* Grigio molto scuro */
+  --color-background: #000033; /* Blu notte */
+  --color-title: #020c1b; /* Quasi nero con una sfumatura di blu */
+  --color-description: #e6f1ff; /* Bianco-azzurro brillante per il testo */
+  --color-text: #ffffff; /* Bianco */
+  --color-text-secondary: #a1a1a1; /* Grigio chiaro */
+  --color-border: #00b4d8; /* Blu elettrico */
+  --color-hover: #0096c7; /* Blu più scuro */
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8); /* Sfondo trasparente */
+  --color-green: #37af65; /* Verde per il pulsante di invio */
+}
+
+/* Reset di base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Sfondo con gradiente e immagine */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-background);
+  background-image: linear-gradient(115deg, rgba(0, 180, 216, 0.8), rgba(0, 180, 216, 0.8)), url(/images/mandark1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#title {
+  font-size: 3rem;
+  color: var(--color-title);
+  margin-bottom: 10px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+#description {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-description);
+  font-style: italic;
+}
+
+/* Form */
+#survey-form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--color-primary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid var(--color-border);
+  border-radius: 5px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+textarea::placeholder {
+  color: var(--color-text-secondary);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+fieldset {
+  border: 2px solid var(--color-border);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  padding: 0 10px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  width: 100%;
+  padding: 10px;
+}
+
+#submit {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: var(--color-hover);
+}

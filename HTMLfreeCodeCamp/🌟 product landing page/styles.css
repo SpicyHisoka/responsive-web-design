@@ -1,0 +1,191 @@
+:root {
+    --primary-color: #FFD700; /* Oro brillante per richiamare l'elmo dorato */
+    --secondary-color: #800000; /* Rosso scuro per richiamare la passione e la forza */
+    --accent-color: #6A6A6A; /* Grigio scuro per l'accento e l'eleganza */
+    --dark-color: #2A2A2A; /* Colore molto scuro per il testo e gli sfondi */
+    --light-bg-color: #FAFAD2; /* Colore beige chiaro per lo sfondo, per dare un aspetto luminoso */
+    --button-bg-color: #FFD700; /* Pulsante oro per un aspetto audace */
+    --button-hover-bg-color: #800000; /* Rosso scuro al passaggio del mouse */
+    --box-shadow-color: rgba(0, 0, 0, 0.15); /* Ombra più leggera */
+    --box-shadow-hover-color: rgba(0, 0, 0, 0.25); /* Ombra più intensa al passaggio del mouse */
+    --text-color-light: #FFD700; /* Testo dorato per contrastare con lo sfondo più scuro */
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg-color);
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    z-index: 999;
+    border-radius: 0 0 15px 15px;
+}
+
+#header-img {
+    height: 100px;
+    width: auto;
+    z-index: 999;
+}
+
+#nav-bar {
+    display: flex;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+.nav-link {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+/* Sezioni principali */
+.main-content {
+    padding: 60px 20px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#register {
+    margin-top: 120px;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    margin-top: 50px;
+}
+
+/* Stile email*/
+input[type="email"] {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    background: var(--light-bg-color);
+    color: var(--dark-color);
+}
+
+#submit {
+    background: var(--button-bg-color);
+    color: var(--dark-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+#submit:hover {
+    background: var(--button-hover-bg-color);
+    color: white;
+}
+
+/* Sezione prodotti */
+.product {
+    background: var(--text-color-light);
+    padding: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.product img {
+    border-radius: 15px;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.product img:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 20px var(--box-shadow-hover-color);
+}
+
+/* Sezione Blog & Video */
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: var(--dark-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #nav-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-content {
+        padding: 40px 15px;
+    }
+
+    #register {
+        margin-top: 270px;
+    }
+
+    #products div {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
